@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Ticket Attendance Tracking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Start Screen -->
+  <section id="start" class="page">
+    <h1>EVENT TICKET ATTENDANCE TRACKING</h1>
+    <div class="role-buttons">
+      <div class="role" onclick="showPage('studentLogin')">
+        <div class="icon">S</div>
+        <p>STUDENT</p>
+      </div>
+      <div class="role" onclick="showPage('adminLogin')">
+        <div class="icon">A</div>
+        <p>ADMIN</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Student Login -->
+  <section id="studentLogin" class="page hidden">
+    <h1>EVENT TICKET ATTENDANCE TRACKING</h1>
+    <h2>STUDENT</h2>
+    <form>
+      <label>NAME</label>
+      <input type="text">
+      <label>INSTITUTIONAL EMAIL</label>
+      <input type="email">
+      <label>PASSWORD</label>
+      <input type="password">
+      <button type="button" onclick="studentLogin()">LOG IN</button>
+    </form>
+    <p class="link" onclick="showPage('accountCreation')">NO ACCOUNT YET?</p>
+  </section>
+
+  <!-- Admin Login -->
+  <section id="adminLogin" class="page hidden">
+    <h1>EVENT TICKET ATTENDANCE TRACKING</h1>
+    <h2>ADMIN</h2>
+    <form>
+      <label>NAME</label>
+      <input type="text">
+      <label>EMAIL</label>
+      <input type="email">
+      <label>PASSWORD</label>
+      <input type="password">
+      <button type="button" onclick="adminLogin()">LOG IN</button>
+    </form>
+    <p class="link" onclick="showPage('accountCreation')">NO ACCOUNT YET?</p>
+  </section>
+
+  <!-- Account Creation -->
+  <section id="accountCreation" class="page hidden">
+
+    <h1>ACCOUNT CREATION</h1>
+
+    <div class="toggle">
+      <label>
+        <input type="radio" name="role" value="student" checked>
+        STUDENT
+      </label>
+
+      <label>
+        <input type="radio" name="role" value="admin">
+        ADMIN
+      </label>
+    </div>
+
+    <form>
+
+      <label>NAME</label>
+      <input type="text" id="registerName">
+
+      <label>INSTITUTIONAL EMAIL</label>
+      <input type="email" id="registerEmail">
+
+      <label>PASSWORD</label>
+      <input type="password" id="registerPassword">
+
+      <label>STUDENT NUMBER</label>
+      <input type="text">
+
+      <label>YEAR LEVEL</label>
+      <input type="text">
+
+      <label>DEPARTMENT</label>
+      <input type="text">
+
+      <label>COURSE</label>
+      <input type="text">
+
+      <button type="button" onclick="registerUser()">
+        PROCEED
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- Account Success -->
+  <section id="accountSuccess" class="page hidden">
+    <h2>ACCOUNT CREATED SUCCESSFULLY!</h2>
+    <button type="button" onclick="showPage('start')">GO TO LOGIN PAGE</button>
+  </section>
+
+  <!-- Student Dashboard -->
+  <section id="studentHome" class="page hidden">
+    <h2>STUDENT DASHBOARD</h2>
+    <button onclick="showPage('studentTicket')">Ticket</button>
+    <button onclick="showPage('studentHistory')">History</button>
+    <button onclick="showPage('start')">Log Out</button>
+  </section>
+
+  <!-- Admin Dashboard -->
+  <section id="adminHome" class="page hidden">
+    <h2>ADMIN DASHBOARD</h2>
+    <button onclick="showPage('createEvent')">Create Event</button>
+    <button onclick="showPage('adminScanner')">Scanner</button>
+    <button onclick="showPage('start')">Log Out</button>
+  </section>
+
+  <!-- Other pages -->
+  <section id="studentHistory" class="page hidden"><h2>Student History</h2></section>
+  <section id="studentTicket" class="page hidden"><h2>Student Ticket</h2></section>
+  <section id="createEvent" class="page hidden"><h2>Create Event</h2></section>
+  <section id="adminScanner" class="page hidden"><h2>Admin Scanner</h2></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
