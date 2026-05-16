@@ -43,7 +43,7 @@ input {
 button {
   background: black;
   color: white;
-  padding: 12px;
+  padding: 12px 20px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -95,4 +95,11 @@ button:hover {
   justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
+}
+
+
+.button-row {
+  display: flex;              
+  justify-content: center;    
+  gap: 15px;                  
 }
