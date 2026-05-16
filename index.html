@@ -31,7 +31,10 @@
       <label>EMAIL</label>
       <input type="email">
       <label>PASSWORD</label>
-      <input type="password">
+<div class="password-field">
+  <input type="password" id="passwordInput">
+  <span class="toggle-eye" onclick="togglePassword('passwordInput')">👁️</span>
+</div>
       <button type="button" onclick="showPage('studentHome')">LOG IN</button>
     </form>
     <p class="link" onclick="showPage('accountCreation')">NO ACCOUNT YET?</p>
@@ -47,7 +50,10 @@
       <label>EMAIL</label>
       <input type="email">
       <label>PASSWORD</label>
-      <input type="password">
+    <div class="password-field">
+      <input type="password" id="passwordInput">
+      <span class="toggle-eye" onclick="togglePassword('passwordInput')">👁️</span>
+    </div>
       <button type="button" onclick="showPage('adminHome')">LOG IN</button>
     </form>
     <p class="link" onclick="showPage('accountCreation')">NO ACCOUNT YET?</p>
@@ -86,9 +92,16 @@
     <label>EMAIL</label>
     <input type="email">
     <label>PASSWORD</label>
-    <input type="password">
-    <label>CONFIRM PASSWORD</label>
-    <input type="password">
+<div class="password-field">
+  <input type="password" id="creationPassword">
+  <span class="toggle-eye" onclick="togglePassword('creationPassword')">👁️</span>
+</div>
+
+<label>CONFIRM PASSWORD</label>
+<div class="password-field">
+  <input type="password" id="creationConfirmPassword">
+  <span class="toggle-eye" onclick="togglePassword('creationConfirmPassword')">👁️</span>
+</div>
     <!-- Finish and go to Success -->
     <button type="button" onclick="showPage('accountSuccess')">CREATE ACCOUNT</button>
   </form>
