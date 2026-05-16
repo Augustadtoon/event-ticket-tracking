@@ -54,48 +54,72 @@
   </section>
 
   <!-- Account Creation -->
-  <section id="accountCreation" class="page hidden">
-    <h1>ACCOUNT CREATION</h1>
-    <div class="toggle">
-      <label><input type="radio" name="role" checked> STUDENT</label>
-      <label><input type="radio" name="role"> ADMIN</label>
-    </div>
-    <form>
-      <label>NAME</label>
-      <input type="text">
-      <label>STUDENT NUMBER</label>
-      <input type="text">
-      <label>YEAR LEVEL</label>
-      <input type="text">
-      <label>DEPARTMENT</label>
-      <input type="text">
-      <label>COURSE</label>
-      <input type="text">
-      <button type="button" onclick="showPage('accountSuccess')">PROCEED</button>
-    </form>
-  </section>
+<section id="accountCreation" class="page hidden">
+  <h1>ACCOUNT CREATION</h1>
+  <div class="toggle">
+    <label><input type="radio" name="role" checked> STUDENT</label>
+    <label><input type="radio" name="role"> ADMIN</label>
+  </div>
+  <form>
+    <label>NAME</label>
+    <input type="text">
+    <label>STUDENT NUMBER</label>
+    <input type="text">
+    <label>YEAR LEVEL</label>
+    <input type="text">
+    <label>DEPARTMENT</label>
+    <input type="text">
+    <label>COURSE</label>
+    <input type="text">
+    <!-- Proceed to Step 2 -->
+    <button type="button" onclick="showPage('accountCreationStep2')">PROCEED</button>
+  </form>
+</section>
 
-  <!-- Account Success -->
-  <section id="accountSuccess" class="page hidden">
-    <h2>ACCOUNT CREATED SUCCESSFULLY!</h2>
-    <button type="button" onclick="showPage('start')">GO TO LOGIN PAGE</button>
-  </section>
+<section id="accountCreationStep2" class="page hidden">
+  <h1>ACCOUNT CREATION</h1>
+  <form>
+    <div class="toggle">
+    <label><input type="radio" name="role" checked> STUDENT</label>
+    <label><input type="radio" name="role"> ADMIN</label>
+  </div>
+    <label>EMAIL</label>
+    <input type="email">
+    <label>PASSWORD</label>
+    <input type="password">
+    <label>CONFIRM PASSWORD</label>
+    <input type="password">
+    <!-- Finish and go to Success -->
+    <button type="button" onclick="showPage('accountSuccess')">CREATE ACCOUNT</button>
+  </form>
+</section>
+
+<!-- Account Success -->
+<section id="accountSuccess" class="page hidden">
+  <h2>ACCOUNT CREATED SUCCESSFULLY!</h2>
+  <button type="button" onclick="showPage('start')">GO TO LOGIN PAGE</button>
+</section>
 
   <!-- Student Dashboard -->
   <section id="studentHome" class="page hidden">
     <h2>STUDENT DASHBOARD</h2>
-    <button onclick="showPage('studentHome')">Home</button>
-    <button onclick="showPage('studentHistory')">History</button>
-    <button onclick="showPage('start')">Log Out</button>
+    <div class="button-row">
+      <button onclick="showPage('studentHome')">Home</button>
+      <button onclick="showPage('studentHistory')">History</button>
+      <button onclick="showPage('start')">Log Out</button>
+    </div>
   </section>
 
   <!-- Admin Dashboard -->
-  <section id="adminHome" class="page hidden">
-    <h2>ADMIN DASHBOARD</h2>
+<section id="adminHome" class="page hidden">
+  <h2>ADMIN DASHBOARD</h2>
+  <div class="button-row">
+    <button onclick="showPage('start')">HOME</button>
     <button onclick="showPage('createEvent')">Create Event</button>
     <button onclick="showPage('adminScanner')">Scanner</button>
     <button onclick="showPage('start')">Log Out</button>
-  </section>
+  </div>
+</section>
 
   <!-- Other pages -->
   <section id="studentHome" class="page hidden"><h2>Student Home</h2></section>
