@@ -1,1 +1,0 @@
-# event-ticket-frontend-and-backend
